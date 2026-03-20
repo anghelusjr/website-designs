@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design Services</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f6f6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Website Design Services</h1>
+    <p class="subtitle">
+      Professional website design for small businesses and startups.
+    </p>
+
+    <div class="gallery" id="gallery"></div>
+
+  </div>
+
+  <footer>
+    © 2026 WebsiteDesigns.art – Professional Website Design Services
+  </footer>
+
+
+  <script>
+
+    const templates = [
+
+      "acupuncture-master",
+      "apex-1.0.0",
+      "autorepair-master",
+      "builerz-master",
+      "Capiclean-1.0.0",
+      "cleaning-company-master",
+      "constructioncompany-master",
+      "dental-pro-v.01",
+      "dentcare-1.0.0",
+      "dente-gh-pages",
+      "dentista-master",
+      "garage",
+      "handyman-master",
+      "healthcoach-master",
+      "healthcouch-master",
+      "homebuilder-master",
+      "homeland-master",
+      "hvac-master",
+      "hvac-new-1.0.0",
+      "landscaper-master",
+      "laundry-master",
+      "lawncare-master",
+      "medic-care",
+      "novena",
+      "painter-1.0.0",
+      "Painto-1.0.0",
+      "PestKit-1.0.0",
+      "plumber-master",
+      "roofing-master",
+      "UpConstruction-1.0.0",
+      "webuild-1.0.0",
+      "wilcon-main"
+
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    templates.forEach(name => {
+
+      let title = name
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase());
+
+      gallery.innerHTML += `
+
+<div class="card">
+
+<img src="placeholder.png">
+
+<div class="card-content">
+
+<h3>${title}</h3>
+
+<p>Professional business website template demo.</p>
+
+<a href="${name}/index.html" target="_blank" class="btn">
+View Demo
+</a>
+
+</div>
+
+</div>
+
+`;
+
+    });
+
+  </script>
+
+</body>
+
+</html>
