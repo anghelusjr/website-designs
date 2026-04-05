@@ -3,8 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Inspirations</title>
 
+<!-- SEO -->
+<title>Website Design Inspirations | Modern Business Website Examples</title>
+<meta name="description" content="Explore modern, clean, and professional website design inspirations for businesses. Perfect for corporate, service, and local business websites.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://websitedesigns.art/inspirations">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Website Design Inspirations">
+<meta property="og:description" content="Modern and professional website design ideas for your business.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/preview.webp">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon1.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon1.png">
@@ -32,9 +42,6 @@ body{
 h1,h2,h3{
   font-family:'Playfair Display',serif;
 }
-
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
 .container{max-width:1200px;margin:auto;padding:80px 20px}
 
@@ -96,12 +103,8 @@ h1{text-align:center;font-size:40px;margin-bottom:10px}
   cursor:pointer;
 }
 
-.hidden{display:none}
-
 .fade{opacity:0;transform:translateY(30px);transition:.7s}
 .fade.show{opacity:1;transform:translateY(0)}
-
-footer{text-align:center;padding:40px;color:#8a7f75}
 </style>
 </head>
 
@@ -114,48 +117,44 @@ footer{text-align:center;padding:40px;color:#8a7f75}
 <div id="gallery" class="gallery"></div>
 
 <button id="loadBtn" class="load-btn">Load More</button>
-
 </div>
 
 <script>
-
-// MODEL (3 batches)
 const batch1 = [
-  {title:"Corporate Website",desc:"Business layout",img:"images/Business-Corporate-Website.webp",link:"/apex-1.0.0"},
-  {title:"Auto Repair",desc:"Service business",img:"images/Auto-Repair-Website.webp",link:"/autorepair-master"},
-  {title:"Construction",desc:"Builder website",img:"images/Construction-Company-Website.webp",link:"/builerz-master"},
-  {title:"Cleaning",desc:"Home services",img:"images/Cleaning-Services-Website.webp",link:"/Capiclean-1.0.0"},
-  {title:"Cleaning Company",desc:"Commercial cleaning",img:"images/Cleaning-Company-Website.webp",link:"/cleaning-company-master"},
-  {title:"Construction Business",desc:"Corporate builder",img:"images/Construction-Business-Website.webp",link:"/constructioncompany-master"}
+  {title:"Corporate Website",desc:"Business layout",img:"images/Business-Corporate-Website.webp",alt:"Corporate business website design modern layout",link:"/apex-1.0.0"},
+  {title:"Auto Repair",desc:"Service business",img:"images/Auto-Repair-Website.webp",alt:"Auto repair service website clean design",link:"/autorepair-master"},
+  {title:"Construction",desc:"Builder website",img:"images/Construction-Company-Website.webp",alt:"Construction company website professional layout",link:"/builerz-master"},
+  {title:"Cleaning",desc:"Home services",img:"images/Cleaning-Services-Website.webp",alt:"Cleaning services website modern UI",link:"/Capiclean-1.0.0"},
+  {title:"Cleaning Company",desc:"Commercial cleaning",img:"images/Cleaning-Company-Website.webp",alt:"Commercial cleaning company website layout",link:"/cleaning-company-master"},
+  {title:"Construction Business",desc:"Corporate builder",img:"images/Construction-Business-Website.webp",alt:"Construction business website corporate design",link:"/constructioncompany-master"}
 ];
 
 const batch2 = [
-  {title:"Dental Clinic",desc:"Healthcare",img:"images/DentCare-Dental-Website.webp",link:"/dentcare-1.0.0"},
-  {title:"Dentist",desc:"Medical",img:"images/Dentist-Website.webp",link:"/dentista-master"},
-  {title:"Garage",desc:"Auto services",img:"images/Garage-Auto-Service-Website.webp",link:"/garage"},
-  {title:"Handyman",desc:"Repair",img:"images/Handyman-Services-Website.webp",link:"/handyman-master"},
-  {title:"Health Coach",desc:"Coaching",img:"images/Health-Coach-Website.webp",link:"/healthcoach-master"},
-  {title:"Home Builder",desc:"Construction",img:"images/Home-Builder-Website.webp",link:"/homebuilder-master"}
+  {title:"Dental Clinic",desc:"Healthcare",img:"images/DentCare-Dental-Website.webp",alt:"Dental clinic website healthcare design",link:"/dentcare-1.0.0"},
+  {title:"Dentist",desc:"Medical",img:"images/Dentist-Website.webp",alt:"Dentist website medical professional layout",link:"/dentista-master"},
+  {title:"Garage",desc:"Auto services",img:"images/Garage-Auto-Service-Website.webp",alt:"Garage auto service website modern design",link:"/garage"},
+  {title:"Handyman",desc:"Repair",img:"images/Handyman-Services-Website.webp",alt:"Handyman services website clean layout",link:"/handyman-master"},
+  {title:"Health Coach",desc:"Coaching",img:"images/Health-Coach-Website.webp",alt:"Health coach website modern coaching design",link:"/healthcoach-master"},
+  {title:"Home Builder",desc:"Construction",img:"images/Home-Builder-Website.webp",alt:"Home builder website construction layout",link:"/homebuilder-master"}
 ];
 
 const batch3 = [
-  {title:"HVAC",desc:"Air services",img:"images/HVAC-Services-Website.webp",link:"/hvac-master"},
-  {title:"HVAC Repair",desc:"Maintenance",img:"images/HVAC-Repair-Website.webp",link:"/hvac-new-1.0.0"},
-  {title:"Landscaping",desc:"Outdoor",img:"images/Landscaping-Website.webp",link:"/landscaper-master"},
-  {title:"Laundry",desc:"Cleaning",img:"images/Laundry-Services-Website.webp",link:"/laundry-master"},
-  {title:"Lawn Care",desc:"Outdoor",img:"images/Lawn-Care-Website.webp",link:"/lawncare-master"},
-  {title:"Medic Care",desc:"Healthcare",img:"images/Medic-Care.webp",link:"/medic-care"}
+  {title:"HVAC",desc:"Air services",img:"images/HVAC-Services-Website.webp",alt:"HVAC services website modern layout",link:"/hvac-master"},
+  {title:"HVAC Repair",desc:"Maintenance",img:"images/HVAC-Repair-Website.webp",alt:"HVAC repair website service design",link:"/hvac-new-1.0.0"},
+  {title:"Landscaping",desc:"Outdoor",img:"images/Landscaping-Website.webp",alt:"Landscaping website outdoor design",link:"/landscaper-master"},
+  {title:"Laundry",desc:"Cleaning",img:"images/Laundry-Services-Website.webp",alt:"Laundry services website clean UI",link:"/laundry-master"},
+  {title:"Lawn Care",desc:"Outdoor",img:"images/Lawn-Care-Website.webp",alt:"Lawn care website outdoor service layout",link:"/lawncare-master"},
+  {title:"Medic Care",desc:"Healthcare",img:"images/Medic-Care.webp",alt:"Healthcare medic website professional design",link:"/medic-care"}
 ];
 
 let currentBatch = 0;
 const batches = [batch1, batch2, batch3];
 
-// VIEW
 function createCard(p){
   return `
   <div class="card fade">
-    <img src="${p.img}" />
-    <div class="overlay"><a href="${p.link}" target="_blank">Preview</a></div>
+    <img src="${p.img}" alt="${p.alt}" loading="lazy">
+    <div class="overlay"><a href="${p.link}" target="_blank" rel="noopener noreferrer">Preview</a></div>
     <div class="card-content">
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
@@ -168,7 +167,6 @@ function renderBatch(batch){
   gallery.innerHTML += batch.map(createCard).join('');
 }
 
-// CONTROLLER
 function init(){
   renderBatch(batches[currentBatch]);
 
@@ -199,19 +197,13 @@ function observeFade(){
 }
 
 window.onload = init;
-
 </script>
-
-
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="footer-container">
 
-    <!-- TOP -->
     <div class="footer-top">
-
-      <!-- LEFT -->
       <div class="footer-left">
         <a href="https://websitedesigns.art" class="footer-logo">
           websitedesigns<span>.art</span>
@@ -221,9 +213,7 @@ window.onload = init;
         </p>
       </div>
 
-      <!-- RIGHT -->
       <div class="footer-right">
-
         <div class="footer-contact">
           <p class="footer-title">Contact</p>
           <a href="mailto:hello@websitedesigns.art">hello@websitedesigns.art</a>
@@ -235,24 +225,17 @@ window.onload = init;
           <p>WDA Web Design Services</p>
           <p>Based in the Philippines — Serving clients worldwide.</p>
         </div>
-
       </div>
-
     </div>
 
-    <!-- DIVIDER -->
     <div class="footer-divider"></div>
 
-    <!-- BOTTOM -->
     <div class="footer-bottom">
-
       <div class="footer-links">
         <a href="https://websitedesigns.art/privacy-policy">Privacy Policy</a>
-        <a href="https://websitedesigns.art//terms-of-service">Terms of Service</a>
+        <a href="https://websitedesigns.art/terms-of-service">Terms of Service</a>
       </div>
-
       <p class="footer-copy" id="copyright"></p>
-
     </div>
 
   </div>
@@ -277,9 +260,7 @@ window.onload = init;
   gap:60px;
 }
 
-.footer-left{
-  max-width:420px;
-}
+.footer-left{max-width:420px;}
 
 .footer-logo{
   font-size:26px;
@@ -303,10 +284,7 @@ window.onload = init;
   gap:20px;
 }
 
-.footer-title{
-  font-weight:600;
-  margin-bottom:6px;
-}
+.footer-title{font-weight:600;margin-bottom:6px;}
 
 .footer-contact a{
   display:block;
@@ -360,18 +338,8 @@ window.onload = init;
 </style>
 
 <script>
-  document.getElementById('copyright').innerText = `© ${new Date().getFullYear()} WDA Web Design Services`;
-</script>
-
-<style>
-@media(min-width:768px){
-  .footer-grid{grid-template-columns:1fr 1fr;text-align:left}
-  .footer-bottom{flex-direction:row;text-align:left}
-}
-</style>
-
-<script>
-  document.getElementById('copyright').innerText = `© ${new Date().getFullYear()} WDA Web Design Services`;
+document.getElementById('copyright').innerText =
+`© ${new Date().getFullYear()} WDA Web Design Services`;
 </script>
 
 </body>
