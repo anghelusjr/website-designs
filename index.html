@@ -1,303 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <title>Website Design Inspirations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f6f6f6;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Inspirations</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+<style>
+:root{
+  --primary:#E8D5C4;
+  --bg:#FAF9F6;
+  --accent:#A8B5A2;
+  --text:#4A3F35;
+}
 
-        h1 {
-            text-align: center;
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 50px;
-        }
+.container{max-width:1200px;margin:auto;padding:80px 20px}
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+h1{text-align:center;font-size:40px;margin-bottom:10px}
+.subtitle{text-align:center;color:#7a6f66;margin-bottom:40px}
 
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: .3s;
-        }
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
 
-        .card:hover {
-            transform: translateY(-6px);
-        }
+.card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #eee;
+  position:relative;
+  transition:.35s ease;
+}
 
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(74,63,53,0.08);
+}
 
-        .card-content {
-            padding: 20px;
-        }
+.card img{width:100%;height:200px;object-fit:cover;transition:.4s}
+.card:hover img{transform:scale(1.05)}
 
-        .card h3 {
-            margin: 0 0 10px;
-        }
+.card-content{padding:18px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:14px;color:#7a6f66}
 
-        .card p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-        }
+.overlay{
+  position:absolute;inset:0;
+  background:rgba(74,63,53,0.6);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:.3s;
+}
+.card:hover .overlay{opacity:1}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+.overlay a{
+  background:var(--primary);
+  color:var(--text);
+  padding:10px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+}
 
-        .btn:hover {
-            background: #333;
-        }
+.load-btn{
+  display:block;
+  margin:40px auto 0;
+  padding:12px 20px;
+  background:var(--text);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+.hidden{display:none}
+
+.fade{opacity:0;transform:translateY(30px);transition:.7s}
+.fade.show{opacity:1;transform:translateY(0)}
+
+footer{text-align:center;padding:40px;color:#8a7f75}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
+<h1 class="fade">Website Design Inspirations</h1>
+<p class="subtitle fade">Clean, modern websites you can use for clients.</p>
 
-        <h1>
-            Website Design Inspirations
-        </h1>
-        <p class="subtitle">Professional website design for small businesses and startups.</p>
+<div id="gallery" class="gallery"></div>
 
-        <div class="gallery">
+<button id="loadBtn" class="load-btn">Load More</button>
 
-
-            <div class="card">
-                <img src="Business-Corporate-Website.PNG">    
-                <div class="card-content">
-                    <h3>Business Corporate Website</h3>
-                    <p>Professional corporate website for companies.</p>
-                    <a href="/apex-1.0.0" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Auto-Repair-Website.PNG">
-                <div class="card-content">
-                    <h3>Auto Repair Website</h3>
-                    <p>Modern website design for car repair services.</p>
-                    <a href="/autorepair-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Construction-Company-Website.PNG">
-                <div class="card-content">
-                    <h3>Construction Company Website</h3>
-                    <p>Professional layout for builders and contractors.</p>
-                    <a href="/builerz-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Cleaning-Services-Website.PNG">
-                <div class="card-content">
-                    <h3>Cleaning Services Website</h3>
-                    <p>Website design for residential and commercial cleaning.</p>
-                    <a href="/Capiclean-1.0.0" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Cleaning-Company-Website.PNG">
-                <div class="card-content">
-                    <h3>Cleaning Company Website</h3>
-                    <p>Professional cleaning company website template.</p>
-                    <a href="/cleaning-company-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Construction-Business-Website.PNG">
-                <div class="card-content">
-                    <h3>Construction Business Website</h3>
-                    <p>Corporate construction company website design.</p>
-                    <a href="/constructioncompany-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-
-            <div class="card">
-                <img src="DentCare-Dental-Website.PNG">
-                <div class="card-content">
-                    <h3>DentCare Dental Website</h3>
-                    <p>Clean and modern dental clinic website design.</p>
-                    <a href="/dentcare-1.0.0" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Dentist-Website.PNG">
-                <div class="card-content">
-                    <h3>Dentist Website</h3>
-                    <p>Professional dentist website template.</p>
-                    <a href="/dentista-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Garage-Auto-Service-Website.PNG">
-                <div class="card-content">
-                    <h3>Garage Auto Service Website</h3>
-                    <p>Website for garages and car maintenance shops.</p>
-                    <a href="/garage" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Handyman-Services-Website.PNG">
-                <div class="card-content">    
-                    <h3>Handyman Services Website</h3>
-                    <p>Website for handyman and repair services.</p>
-                    <a href="/handyman-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Health-Coach-Website.PNG">
-                <div class="card-content">
-                    <h3>Health Coach Website</h3>
-                    <p>Website design for health and life coaches.</p>
-                    <a href="/healthcoach-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Home-Builder-Website.PNG">
-                <div class="card-content">
-                    <h3>Home Builder Website</h3>
-                    <p>Website template for home construction companies.</p>
-                    <a href="/homebuilder-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="HVAC-Services-Website.PNG">
-                <div class="card-content">
-                    <h3>HVAC Services Website</h3>
-                    <p>Website design for heating and air conditioning services.</p>
-                    <a href="/hvac-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="HVAC-Repair-Website.PNG">
-                <div class="card-content">
-                    <h3>HVAC Repair Website</h3>
-                    <p>Modern HVAC repair and maintenance website.</p>
-                    <a href="/hvac-new-1.0.0" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Landscaping-Website.PNG">
-                <div class="card-content">
-                    <h3>Landscaping Website</h3>
-                    <p>Website template for landscaping businesses.</p>
-                    <a href="/landscaper-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Laundry-Services-Website.PNG">
-                <div class="card-content">
-                    <h3>Laundry Services Website</h3>
-                    <p>Professional laundry and dry cleaning website.</p>
-                    <a href="/laundry-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-            <div class="card">
-                <img src="Lawn-Care-Website.PNG">
-                <div class="card-content">
-                    <h3>Lawn Care Website</h3>
-                    <p>Website design for lawn care companies.</p>
-                    <a href="/lawncare-master" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="Medic-Care.PNG">
-                <div class="card-content">
-                    <h3>Medic Care</h3>
-                    <p>Website design for lawn care companies.</p>
-                    <a href="/medic-care" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
+</div>
 
 <footer>
-      <p>
-          © 2026 WebsiteDesigns.art – Professional Website Design Services. All rights reserved.
-      </p>
-      <p style="font-size:12px;opacity:0.7;margin-top:5px;">
-        Demo website designs are displayed for inspiration and showcase purposes only.
-      </p>
+<p>© 2026 WebsiteDesigns.art</p>
 </footer>
 
-</body>
+<script>
 
+// MODEL (3 batches)
+const batch1 = [
+  {title:"Corporate Website",desc:"Business layout",img:"Business-Corporate-Website.PNG",link:"/apex-1.0.0"},
+  {title:"Auto Repair",desc:"Service business",img:"Auto-Repair-Website.PNG",link:"/autorepair-master"},
+  {title:"Construction",desc:"Builder website",img:"Construction-Company-Website.PNG",link:"/builerz-master"},
+  {title:"Cleaning",desc:"Home services",img:"Cleaning-Services-Website.PNG",link:"/Capiclean-1.0.0"},
+  {title:"Cleaning Company",desc:"Commercial cleaning",img:"Cleaning-Company-Website.PNG",link:"/cleaning-company-master"},
+  {title:"Construction Business",desc:"Corporate builder",img:"Construction-Business-Website.PNG",link:"/constructioncompany-master"}
+];
+
+const batch2 = [
+  {title:"Dental Clinic",desc:"Healthcare",img:"DentCare-Dental-Website.PNG",link:"/dentcare-1.0.0"},
+  {title:"Dentist",desc:"Medical",img:"Dentist-Website.PNG",link:"/dentista-master"},
+  {title:"Garage",desc:"Auto services",img:"Garage-Auto-Service-Website.PNG",link:"/garage"},
+  {title:"Handyman",desc:"Repair",img:"Handyman-Services-Website.PNG",link:"/handyman-master"},
+  {title:"Health Coach",desc:"Coaching",img:"Health-Coach-Website.PNG",link:"/healthcoach-master"},
+  {title:"Home Builder",desc:"Construction",img:"Home-Builder-Website.PNG",link:"/homebuilder-master"}
+];
+
+const batch3 = [
+  {title:"HVAC",desc:"Air services",img:"HVAC-Services-Website.PNG",link:"/hvac-master"},
+  {title:"HVAC Repair",desc:"Maintenance",img:"HVAC-Repair-Website.PNG",link:"/hvac-new-1.0.0"},
+  {title:"Landscaping",desc:"Outdoor",img:"Landscaping-Website.PNG",link:"/landscaper-master"},
+  {title:"Laundry",desc:"Cleaning",img:"Laundry-Services-Website.PNG",link:"/laundry-master"},
+  {title:"Lawn Care",desc:"Outdoor",img:"Lawn-Care-Website.PNG",link:"/lawncare-master"},
+  {title:"Medic Care",desc:"Healthcare",img:"Medic-Care.PNG",link:"/medic-care"}
+];
+
+let currentBatch = 0;
+const batches = [batch1, batch2, batch3];
+
+// VIEW
+function createCard(p){
+  return `
+  <div class="card fade">
+    <img src="${p.img}" />
+    <div class="overlay"><a href="${p.link}" target="_blank">Preview</a></div>
+    <div class="card-content">
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+    </div>
+  </div>`;
+}
+
+function renderBatch(batch){
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML += batch.map(createCard).join('');
+}
+
+// CONTROLLER
+function init(){
+  renderBatch(batches[currentBatch]);
+
+  document.getElementById('loadBtn').addEventListener('click', () => {
+    currentBatch++;
+
+    if(currentBatch < batches.length){
+      renderBatch(batches[currentBatch]);
+      observeFade();
+    }
+
+    if(currentBatch === batches.length -1){
+      document.getElementById('loadBtn').style.display='none';
+    }
+  });
+
+  observeFade();
+}
+
+function observeFade(){
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('show');}
+    })
+  });
+
+  document.querySelectorAll('.fade:not(.show)').forEach(el=>observer.observe(el));
+}
+
+window.onload = init;
+
+</script>
+
+</body>
 </html>
