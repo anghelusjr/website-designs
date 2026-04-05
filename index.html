@@ -6,15 +6,22 @@
 
 <!-- SEO -->
 <title>Website Design Inspirations | Modern Business Website Examples</title>
-<meta name="description" content="Explore modern, clean, and professional website design inspirations for businesses. Perfect for corporate, service, and local business websites.">
+<meta name="description" content="Explore modern, clean, and professional website design inspirations for businesses.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://websitedesigns.art/inspirations">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Website Design Inspirations">
-<meta property="og:description" content="Modern and professional website design ideas for your business.">
+<meta property="og:description" content="Modern and professional website design ideas.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/images/preview.webp">
+
+<!-- Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload first image -->
+<link rel="preload" as="image" href="images/Business-Corporate-Website.webp">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon1.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon1.png">
@@ -68,7 +75,12 @@ h1{text-align:center;font-size:40px;margin-bottom:10px}
   box-shadow:0 20px 40px rgba(74,63,53,0.08);
 }
 
-.card img{width:100%;height:200px;object-fit:cover;transition:.4s}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:.4s;
+}
 .card:hover img{transform:scale(1.05)}
 
 .card-content{padding:18px}
@@ -116,7 +128,7 @@ h1{text-align:center;font-size:40px;margin-bottom:10px}
 
 <div id="gallery" class="gallery"></div>
 
-<button id="loadBtn" class="load-btn">Load More</button>
+<button id="loadBtn" class="load-btn" aria-label="Load more website designs">Load More</button>
 </div>
 
 <script>
@@ -153,8 +165,10 @@ const batches = [batch1, batch2, batch3];
 function createCard(p){
   return `
   <div class="card fade">
-    <img src="${p.img}" alt="${p.alt}" loading="lazy">
-    <div class="overlay"><a href="${p.link}" target="_blank" rel="noopener noreferrer">Preview</a></div>
+    <img src="${p.img}" alt="${p.alt}" loading="lazy" width="400" height="200">
+    <div class="overlay">
+      <a href="${p.link}" target="_blank" rel="noopener noreferrer" aria-label="Preview ${p.title} website">Preview</a>
+    </div>
     <div class="card-content">
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
@@ -163,8 +177,7 @@ function createCard(p){
 }
 
 function renderBatch(batch){
-  const gallery = document.getElementById('gallery');
-  gallery.innerHTML += batch.map(createCard).join('');
+  document.getElementById('gallery').innerHTML += batch.map(createCard).join('');
 }
 
 function init(){
@@ -172,12 +185,10 @@ function init(){
 
   document.getElementById('loadBtn').addEventListener('click', () => {
     currentBatch++;
-
     if(currentBatch < batches.length){
       renderBatch(batches[currentBatch]);
       observeFade();
     }
-
     if(currentBatch === batches.length -1){
       document.getElementById('loadBtn').style.display='none';
     }
@@ -192,14 +203,13 @@ function observeFade(){
       if(e.isIntersecting){e.target.classList.add('show');}
     })
   });
-
   document.querySelectorAll('.fade:not(.show)').forEach(el=>observer.observe(el));
 }
 
 window.onload = init;
 </script>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER (UNCHANGED) -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -247,90 +257,23 @@ window.onload = init;
   color:#E8D5C4;
   padding:80px 20px;
 }
-
-.footer-container{
-  max-width:1100px;
-  margin:0 auto;
-  text-align:left;
-}
-
-.footer-top{
-  display:flex;
-  justify-content:space-between;
-  gap:60px;
-}
-
+.footer-container{max-width:1100px;margin:0 auto;text-align:left;}
+.footer-top{display:flex;justify-content:space-between;gap:60px;}
 .footer-left{max-width:420px;}
-
-.footer-logo{
-  font-size:26px;
-  color:#E8D5C4;
-  text-decoration:none;
-  font-weight:600;
-}
-
+.footer-logo{font-size:26px;color:#E8D5C4;text-decoration:none;font-weight:600;}
 .footer-logo span{opacity:.7}
-
-.footer-desc{
-  margin-top:14px;
-  color:rgba(232,213,196,0.7);
-  font-size:14px;
-  line-height:1.6;
-}
-
-.footer-right{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
+.footer-desc{margin-top:14px;color:rgba(232,213,196,0.7);font-size:14px;line-height:1.6;}
+.footer-right{display:flex;flex-direction:column;gap:20px;}
 .footer-title{font-weight:600;margin-bottom:6px;}
-
-.footer-contact a{
-  display:block;
-  text-decoration:none;
-  color:rgba(232,213,196,0.7);
-  font-size:14px;
-}
-
+.footer-contact a{display:block;text-decoration:none;color:rgba(232,213,196,0.7);font-size:14px;}
 .footer-contact a:hover{color:#E8D5C4}
-
-.footer-info{
-  font-size:14px;
-  color:rgba(232,213,196,0.6);
-  line-height:1.6;
-}
-
-.footer-divider{
-  height:1px;
-  background:rgba(232,213,196,0.2);
-  margin:50px 0;
-}
-
-.footer-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.footer-links{
-  display:flex;
-  gap:20px;
-}
-
-.footer-links a{
-  text-decoration:none;
-  color:rgba(232,213,196,0.6);
-  font-size:14px;
-}
-
+.footer-info{font-size:14px;color:rgba(232,213,196,0.6);line-height:1.6;}
+.footer-divider{height:1px;background:rgba(232,213,196,0.2);margin:50px 0;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{text-decoration:none;color:rgba(232,213,196,0.6);font-size:14px;}
 .footer-links a:hover{color:#E8D5C4}
-
-.footer-copy{
-  font-size:14px;
-  color:rgba(232,213,196,0.6);
-}
-
+.footer-copy{font-size:14px;color:rgba(232,213,196,0.6);}
 @media(max-width:768px){
   .footer-top{flex-direction:column;gap:40px}
   .footer-bottom{flex-direction:column;gap:12px;text-align:center}
