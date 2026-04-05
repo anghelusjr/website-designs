@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Website Inspirations</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -12,6 +19,18 @@
   --bg:#FAF9F6;
   --accent:#A8B5A2;
   --text:#4A3F35;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -90,7 +109,7 @@ footer{text-align:center;padding:40px;color:#8a7f75}
 
 <div class="container">
 <h1 class="fade">Website Design Inspirations</h1>
-<p class="subtitle fade">Clean, modern websites you can use for clients.</p>
+<p class="subtitle fade">See how your business website can look modern, clean, and professional.</p>
 
 <div id="gallery" class="gallery"></div>
 
@@ -98,38 +117,34 @@ footer{text-align:center;padding:40px;color:#8a7f75}
 
 </div>
 
-<footer>
-<p>© 2026 WebsiteDesigns.art</p>
-</footer>
-
 <script>
 
 // MODEL (3 batches)
 const batch1 = [
-  {title:"Corporate Website",desc:"Business layout",img:"Business-Corporate-Website.PNG",link:"/apex-1.0.0"},
-  {title:"Auto Repair",desc:"Service business",img:"Auto-Repair-Website.PNG",link:"/autorepair-master"},
-  {title:"Construction",desc:"Builder website",img:"Construction-Company-Website.PNG",link:"/builerz-master"},
-  {title:"Cleaning",desc:"Home services",img:"Cleaning-Services-Website.PNG",link:"/Capiclean-1.0.0"},
-  {title:"Cleaning Company",desc:"Commercial cleaning",img:"Cleaning-Company-Website.PNG",link:"/cleaning-company-master"},
-  {title:"Construction Business",desc:"Corporate builder",img:"Construction-Business-Website.PNG",link:"/constructioncompany-master"}
+  {title:"Corporate Website",desc:"Business layout",img:"images/Business-Corporate-Website.webp",link:"/apex-1.0.0"},
+  {title:"Auto Repair",desc:"Service business",img:"images/Auto-Repair-Website.webp",link:"/autorepair-master"},
+  {title:"Construction",desc:"Builder website",img:"images/Construction-Company-Website.webp",link:"/builerz-master"},
+  {title:"Cleaning",desc:"Home services",img:"images/Cleaning-Services-Website.webp",link:"/Capiclean-1.0.0"},
+  {title:"Cleaning Company",desc:"Commercial cleaning",img:"images/Cleaning-Company-Website.webp",link:"/cleaning-company-master"},
+  {title:"Construction Business",desc:"Corporate builder",img:"images/Construction-Business-Website.webp",link:"/constructioncompany-master"}
 ];
 
 const batch2 = [
-  {title:"Dental Clinic",desc:"Healthcare",img:"DentCare-Dental-Website.PNG",link:"/dentcare-1.0.0"},
-  {title:"Dentist",desc:"Medical",img:"Dentist-Website.PNG",link:"/dentista-master"},
-  {title:"Garage",desc:"Auto services",img:"Garage-Auto-Service-Website.PNG",link:"/garage"},
-  {title:"Handyman",desc:"Repair",img:"Handyman-Services-Website.PNG",link:"/handyman-master"},
-  {title:"Health Coach",desc:"Coaching",img:"Health-Coach-Website.PNG",link:"/healthcoach-master"},
-  {title:"Home Builder",desc:"Construction",img:"Home-Builder-Website.PNG",link:"/homebuilder-master"}
+  {title:"Dental Clinic",desc:"Healthcare",img:"images/DentCare-Dental-Website.webp",link:"/dentcare-1.0.0"},
+  {title:"Dentist",desc:"Medical",img:"images/Dentist-Website.webp",link:"/dentista-master"},
+  {title:"Garage",desc:"Auto services",img:"images/Garage-Auto-Service-Website.webp",link:"/garage"},
+  {title:"Handyman",desc:"Repair",img:"images/Handyman-Services-Website.webp",link:"/handyman-master"},
+  {title:"Health Coach",desc:"Coaching",img:"images/Health-Coach-Website.webp",link:"/healthcoach-master"},
+  {title:"Home Builder",desc:"Construction",img:"images/Home-Builder-Website.webp",link:"/homebuilder-master"}
 ];
 
 const batch3 = [
-  {title:"HVAC",desc:"Air services",img:"HVAC-Services-Website.PNG",link:"/hvac-master"},
-  {title:"HVAC Repair",desc:"Maintenance",img:"HVAC-Repair-Website.PNG",link:"/hvac-new-1.0.0"},
-  {title:"Landscaping",desc:"Outdoor",img:"Landscaping-Website.PNG",link:"/landscaper-master"},
-  {title:"Laundry",desc:"Cleaning",img:"Laundry-Services-Website.PNG",link:"/laundry-master"},
-  {title:"Lawn Care",desc:"Outdoor",img:"Lawn-Care-Website.PNG",link:"/lawncare-master"},
-  {title:"Medic Care",desc:"Healthcare",img:"Medic-Care.PNG",link:"/medic-care"}
+  {title:"HVAC",desc:"Air services",img:"images/HVAC-Services-Website.webp",link:"/hvac-master"},
+  {title:"HVAC Repair",desc:"Maintenance",img:"images/HVAC-Repair-Website.webp",link:"/hvac-new-1.0.0"},
+  {title:"Landscaping",desc:"Outdoor",img:"images/Landscaping-Website.webp",link:"/landscaper-master"},
+  {title:"Laundry",desc:"Cleaning",img:"images/Laundry-Services-Website.webp",link:"/laundry-master"},
+  {title:"Lawn Care",desc:"Outdoor",img:"images/Lawn-Care-Website.webp",link:"/lawncare-master"},
+  {title:"Medic Care",desc:"Healthcare",img:"images/Medic-Care.webp",link:"/medic-care"}
 ];
 
 let currentBatch = 0;
@@ -190,38 +205,32 @@ window.onload = init;
 
 
 <!-- ===== FOOTER ===== -->
-<footer style="background:#4A3F35;border-top:1px solid rgba(232,213,196,0.1);padding:64px 24px;">
-  <div style="max-width:1100px;margin:auto;">
+<footer class="footer">
+  <div class="footer-container">
 
-    <div style="display:grid;grid-template-columns:1fr;gap:40px;text-align:center;" class="footer-grid">
+    <!-- TOP -->
+    <div class="footer-top">
 
       <!-- LEFT -->
-      <div>
-        <a href="/" style="text-decoration:none;">
-          <h3 style="font-size:24px;color:#E8D5C4;margin-bottom:12px;font-family: 'Playfair Display', serif;">
-            websitedesigns<span style="opacity:.7">.art</span>
-          </h3>
+      <div class="footer-left">
+        <a href="https://websitedesigns.art" class="footer-logo">
+          websitedesigns<span>.art</span>
         </a>
-
-        <p style="color:rgba(232,213,196,0.7);font-size:14px;max-width:320px;margin:auto;">
-          Conversion-focused website design for businesses that want to turn visitors into clients.
+        <p class="footer-desc">
+          Demo website designs are displayed for inspiration and showcase purposes only.
         </p>
       </div>
 
       <!-- RIGHT -->
-      <div style="color:#E8D5C4;">
+      <div class="footer-right">
 
-        <!-- Contact -->
-        <div style="margin-bottom:20px;">
-          <p style="font-weight:600;margin-bottom:8px;">Contact</p>
-          <div style="font-size:14px;color:rgba(232,213,196,0.7);">
-            <a href="mailto:hello@websitedesigns.art" style="display:block;color:inherit;text-decoration:none;margin-bottom:4px;">hello@websitedesigns.art</a>
-            <a href="mailto:support@websitedesigns.art" style="display:block;color:inherit;text-decoration:none;">support@websitedesigns.art</a>
-          </div>
+        <div class="footer-contact">
+          <p class="footer-title">Contact</p>
+          <a href="mailto:hello@websitedesigns.art">hello@websitedesigns.art</a>
+          <a href="mailto:support@websitedesigns.art">support@websitedesigns.art</a>
         </div>
 
-        <!-- Business Info -->
-        <div style="font-size:14px;color:rgba(232,213,196,0.6);line-height:1.6;">
+        <div class="footer-info">
           <p>DTI Business Name Registration No.: 8033290</p>
           <p>WDA Web Design Services</p>
           <p>Based in the Philippines — Serving clients worldwide.</p>
@@ -231,23 +240,128 @@ window.onload = init;
 
     </div>
 
-    <!-- Divider -->
-    <div style="margin:40px 0;height:1px;background:rgba(232,213,196,0.2);"></div>
+    <!-- DIVIDER -->
+    <div class="footer-divider"></div>
 
-    <!-- Bottom -->
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:space-between;text-align:center;color:rgba(232,213,196,0.6);font-size:14px;" class="footer-bottom">
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
 
-      <div style="display:flex;gap:16px;">
-        <a href="/privacy-policy" style="color:inherit;text-decoration:none;">Privacy Policy</a>
-        <a href="/terms-of-service" style="color:inherit;text-decoration:none;">Terms of Service</a>
+      <div class="footer-links">
+        <a href="https://websitedesigns.art/privacy-policy">Privacy Policy</a>
+        <a href="https://websitedesigns.art//terms-of-service">Terms of Service</a>
       </div>
 
-      <p id="copyright"></p>
+      <p class="footer-copy" id="copyright"></p>
 
     </div>
 
   </div>
 </footer>
+
+<style>
+.footer{
+  background:#4A3F35;
+  color:#E8D5C4;
+  padding:80px 20px;
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:60px;
+}
+
+.footer-left{
+  max-width:420px;
+}
+
+.footer-logo{
+  font-size:26px;
+  color:#E8D5C4;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.footer-logo span{opacity:.7}
+
+.footer-desc{
+  margin-top:14px;
+  color:rgba(232,213,196,0.7);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-right{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.footer-title{
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.footer-contact a{
+  display:block;
+  text-decoration:none;
+  color:rgba(232,213,196,0.7);
+  font-size:14px;
+}
+
+.footer-contact a:hover{color:#E8D5C4}
+
+.footer-info{
+  font-size:14px;
+  color:rgba(232,213,196,0.6);
+  line-height:1.6;
+}
+
+.footer-divider{
+  height:1px;
+  background:rgba(232,213,196,0.2);
+  margin:50px 0;
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:rgba(232,213,196,0.6);
+  font-size:14px;
+}
+
+.footer-links a:hover{color:#E8D5C4}
+
+.footer-copy{
+  font-size:14px;
+  color:rgba(232,213,196,0.6);
+}
+
+@media(max-width:768px){
+  .footer-top{flex-direction:column;gap:40px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+
+<script>
+  document.getElementById('copyright').innerText = `© ${new Date().getFullYear()} WDA Web Design Services`;
+</script>
 
 <style>
 @media(min-width:768px){
